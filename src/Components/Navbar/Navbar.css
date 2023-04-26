@@ -1,0 +1,19 @@
+.logoImg {
+  margin-left: 1.5rem;
+  width: 6rem;
+}
+
+.signIn {
+  width: 5rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: rgb(0, 143, 163);
+  margin-right: 1rem;
+}
+.logIn {
+  border: 0;
+  background-color: transparent;
+  margin-right: 1rem;
+}
