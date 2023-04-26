@@ -1,0 +1,48 @@
+.footer {
+  margin-top: 3rem;
+  background-color: rgb(33, 33, 33);
+  padding-left: 5rem;
+  padding-top: 2rem;
+  padding-right: 5rem;
+}
+
+.footer hr {
+  color: white;
+}
+
+.footerTop {
+  margin-left: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  gap: 1rem;
+}
+
+.getStartedbutton {
+  border-radius: 0.5rem;
+  background-color: rgb(33, 33, 33);
+  color: white;
+  border: solid white;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.socialHandles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playbtn {
+  width: 10rem;
+  border-radius: 0.5rem;
+}
+.lowest{
+    display: flex;
+    gap: 2rem;
+    color: white;
+}
