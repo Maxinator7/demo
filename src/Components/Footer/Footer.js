@@ -42,30 +42,47 @@ export default function Footer() {
 
       <div className="socialHandles">
         <div className="groupone">
-          <i
-            class="fa-brands fa-facebook fa-2x"
-            style={{ color: "#c1c2c2", margin: "1rem" }}
-          ></i>
-          <i
-            class="fa-brands fa-twitter fa-2x "
-            style={{ color: "#c1c2c2", margin: "1rem" }}
-          ></i>
-          <i
-            class="fa-brands fa-youtube fa-2x "
-            style={{ color: "#c1c2c2", margin: "1rem" }}
-          ></i>
-          <i
-            class="fa-brands fa-instagram fa-2x "
-            style={{ color: "#c1c2c2", margin: "1rem" }}
-          ></i>
-          <i
-            class="fa-brands fa-tiktok fa-2x"
-            style={{ color: "#c1c2c2", margin: "1rem" }}
-          ></i>
+          <a href="https://www.facebook.com/meetup/">
+            <i
+              class="fa-brands fa-facebook fa-2x"
+              style={{ color: "#c1c2c2", margin: "1rem" }}
+            ></i>
+          </a>
+          <a href="https://twitter.com/Meetup/">
+            <i
+              class="fa-brands fa-twitter fa-2x "
+              style={{ color: "#c1c2c2", margin: "1rem" }}
+            ></i>
+          </a>
+          <a href="https://www.youtube.com/meetup">
+            <i
+              class="fa-brands fa-youtube fa-2x "
+              style={{ color: "#c1c2c2", margin: "1rem" }}
+            ></i>
+          </a>
+          <a href="https://www.instagram.com/meetup/">
+            {" "}
+            <i
+              class="fa-brands fa-instagram fa-2x "
+              style={{ color: "#c1c2c2", margin: "1rem" }}
+            ></i>
+          </a>
+          <a href="https://www.tiktok.com/notfound">
+            <i
+              class="fa-brands fa-tiktok fa-2x"
+              style={{ color: "#c1c2c2", margin: "1rem" }}
+            ></i>
+          </a>
         </div>
         <div className="grouptwo">
-          <img className="playbtn" src="google-play-icon-svg-26.jpg" />
-          <img className="playbtn" src="apst.png" />
+          <a href="https://play.google.com/store/apps/details?id=com.meetup&hl=en-US">
+            {" "}
+            <img className="playbtn" src="google-play-icon-svg-26.jpg" />
+          </a>
+          <a href="https://apps.apple.com/us/app/meetup/id375990038">
+            {" "}
+            <img className="playbtn" src="apst.png" />
+          </a>
         </div>
       </div>
       <div className="lowest">
