@@ -1,0 +1,14 @@
+.popularGroups {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.topText {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards {
+  display: flex;
+}
