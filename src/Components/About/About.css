@@ -1,0 +1,24 @@
+.about {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35rem;
+  text-align: center;
+}
+
+.card-img-top {
+  width: 10rem;
+}
+
+.card-body {
+  text-align: center;
+  word-wrap: normal;
+}
