@@ -9,6 +9,7 @@ import PopularGroups from "./Components/PopularGroups/PopularGroups";
 import StoreAdvertise from "./Components/StoreAdvertise/StoreAdvertise";
 import MeetupStories from "./Components/MeetupStories/MeetupStories";
 import Footer from "./Components/Footer/Footer";
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +18,6 @@ function App() {
       <StoriesTab />
       <EventsSearch />
       <About />
-      <button className="joinMeetupButton">join Meetup</button>
       <UpcommingEvents />
       <PopularGroups />
       <StoreAdvertise />
