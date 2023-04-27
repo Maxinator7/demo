@@ -1,17 +1,29 @@
 import React from "react";
-import Storycard from "../StoryCard/Storycard";
+import { useSelector } from "react-redux";
 import "./MeetupStories.css";
 
 export default function MeetupStories() {
-  let events = new Array(5).fill(0);
-
-  let meetupStories = events.map((data) => {
-    return <Storycard />;
+  const { meetupStories } = useSelector((store) => store.MeetupData);
+  let allmeetupStories = meetupStories.map((data) => {
+    return (
+      <div className="meetupCard">
+        <img src={data.image} className="card-img-top" alt="story" />
+        <div className="card-body">
+          <p>{data.description}</p>
+        </div>
+      </div>
+    );
   });
 
   return (
-    <div className="meetupStories">
-      <div className="aboutMeetup">
+    <div classNameName="ms">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         {" "}
         <h3>Stories from Meetup</h3>
         <p>
@@ -19,7 +31,9 @@ export default function MeetupStories() {
           businesses, and made life-long friends. Learn how.
         </p>
       </div>
-      <div className="d-flex">{meetupStories}</div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        {allmeetupStories}
+      </div>
     </div>
   );
 }
