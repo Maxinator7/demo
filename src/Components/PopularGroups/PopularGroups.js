@@ -1,12 +1,26 @@
 import React from "react";
-import Storycard from "../StoryCard/Storycard";
 import "./PopularGroups.css";
+import { useSelector } from "react-redux";
 
 export default function PopularGroups() {
-  let events = new Array(5).fill(0);
+  const { Groups, events } = useSelector((store) => store.MeetupData);
 
-  let populargroups = events.map((data) => {
-    return <Storycard />;
+  let populargroups = Groups.map((data) => {
+    return (
+      <div className="pg">
+        <div className="pg-Top">
+          <img src={data.Image} className="groupImg" alt="group-image" />
+          <h5>{data.Name}</h5>
+        </div>
+
+        <div className="">
+          
+          <h6>{data.location}</h6>
+          <p>{data.GroupDescription}</p>
+         
+        </div>
+      </div>
+    );
   });
 
   return (
@@ -14,7 +28,7 @@ export default function PopularGroups() {
       <div className="topText">
         {" "}
         <h3>Popular groups</h3>
-        <p>Explore more groups</p>
+        <p style={{color:"blue"}}>Explore more groups</p>
       </div>
       <div className="cards">{populargroups}</div>
     </div>

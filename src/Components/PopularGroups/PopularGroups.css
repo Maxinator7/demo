@@ -1,14 +1,38 @@
+.pg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
 .popularGroups {
-  margin-top: 2rem;
+  margin-top: 5rem;
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.pg-Top {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  font-weight: bolder;
 }
 
 .topText {
   display: flex;
   justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .cards {
   display: flex;
+  overflow-x: scroll;
+}
+
+.groupImg {
+  width: 10rem;
+  height: 7rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
 }
