@@ -9,19 +9,34 @@ import PopularGroups from "./Components/PopularGroups/PopularGroups";
 import StoreAdvertise from "./Components/StoreAdvertise/StoreAdvertise";
 import MeetupStories from "./Components/MeetupStories/MeetupStories";
 import Footer from "./Components/Footer/Footer";
-
+import { BrowserRouter,Route,Routes } from "react-router-dom";
+import SearchResuts from "./Components/SearchResults/SearchResuts";
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Hero />
-      <StoriesTab />
-      <EventsSearch />
-      <About />
-      <UpcommingEvents />
-      <PopularGroups />
-      <StoreAdvertise />
-      <MeetupStories />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <Hero />
+                <StoriesTab />
+                <EventsSearch />
+                <About />
+                <UpcommingEvents />
+                <PopularGroups />
+                <StoreAdvertise />
+                <MeetupStories />
+              </>
+            }
+          />
+          <Route path="searchresults" element={<SearchResuts />} />
+        </Routes>
+      </BrowserRouter>
+
       <Footer />
     </div>
   );
