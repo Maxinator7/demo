@@ -3,7 +3,7 @@ import "./PopularGroups.css";
 import { useSelector } from "react-redux";
 
 export default function PopularGroups() {
-  const { Groups, events } = useSelector((store) => store.MeetupData);
+  const { Groups } = useSelector((store) => store.MeetupData);
 
   let populargroups = Groups.map((data) => {
     return (
@@ -14,10 +14,8 @@ export default function PopularGroups() {
         </div>
 
         <div className="">
-          
           <h6>{data.location}</h6>
           <p>{data.GroupDescription}</p>
-         
         </div>
       </div>
     );
@@ -28,7 +26,7 @@ export default function PopularGroups() {
       <div className="topText">
         {" "}
         <h3>Popular groups</h3>
-        <p style={{color:"blue"}}>Explore more groups</p>
+        <p style={{ color: "blue" }}>Explore more groups</p>
       </div>
       <div className="cards">{populargroups}</div>
     </div>
