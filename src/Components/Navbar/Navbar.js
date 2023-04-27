@@ -79,7 +79,11 @@ export default function Navbar() {
                 ></i>
                 Continue with Apple
               </button>
-              <button className="btn">
+              <button
+                className="btn"
+                data-toggle="modal"
+                data-target="#signupModal"
+              >
                 <i
                   className="fa-solid fa-envelope"
                   style={{ color: "#6e7072" }}
@@ -169,6 +173,23 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {/* <!-- Sign Up form goes here --> */}
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 }
