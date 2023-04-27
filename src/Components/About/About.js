@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className="about">
       <div className="aboutText">
-        <h5 className="font-weight-bold">How Meetup Works</h5>
+        <h3 style={{fontWeight:"bolder" , color:"black"}}>How Meetup Works</h3>
         <p>
           Meet new people who share your interests through online and in-person
           events. It’s free to create an account.
@@ -57,6 +57,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <button className="joinMeetupButton">join Meetup</button>
     </div>
   );
 }
