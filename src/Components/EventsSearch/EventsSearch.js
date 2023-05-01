@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import { handleSearchEvent } from "../../Reducer/redux";
 import { useDispatch, useSelector } from "react-redux";
 
-
 export default function EventsSearch() {
-  const {searchedEvent,SearchedLocation}= useSelector(store => store.MeetupData)
-  const dispatch=useDispatch()
+  const { searchedEvent, SearchedLocation } = useSelector(
+    (store) => store.MeetupData
+  );
+  const dispatch = useDispatch();
   const handleChange = (e) => {
-    const {name,value}=e.target
-    dispatch(handleSearchEvent({name:name, value: value}))
+    const { name, value } = e.target;
+    dispatch(handleSearchEvent({ name: name, value: value }));
     // console.log(name);
     // console.log(value);
   };
@@ -29,8 +30,8 @@ export default function EventsSearch() {
               ></i>
             </span>
             <input
-            name="searchedEvent"
-            value={searchedEvent}
+              name="searchedEvent"
+              value={searchedEvent}
               onChange={handleChange}
               type="text"
               className="form-control"
@@ -48,6 +49,9 @@ export default function EventsSearch() {
               ></i>
             </span>
             <input
+            name="SearchedLocation"
+            value={SearchedLocation}
+            onChange={handleChange}
               type="text"
               className="form-control"
               aria-label="Sizing example input"
