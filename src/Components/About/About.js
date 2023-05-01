@@ -1,11 +1,14 @@
 import React from "react";
 import "./About.css";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <div className="about">
       <div className="aboutText">
-        <h3 style={{fontWeight:"bolder" , color:"black"}}>How Meetup Works</h3>
+        <h3 style={{ fontWeight: "bolder", color: "black" }}>
+          How Meetup Works
+        </h3>
         <p>
           Meet new people who share your interests through online and in-person
           events. It’s free to create an account.
@@ -57,7 +60,9 @@ export default function About() {
           </div>
         </div>
       </div>
-      <button className="joinMeetupButton">join Meetup</button>
+      <Link to={"/Signup"}>
+        <button className="joinMeetupButton">join Meetup</button>
+      </Link>
     </div>
   );
 }
