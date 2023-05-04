@@ -1,0 +1,18 @@
+.searchResults {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: solid;
+}
+.button {
+  margin-top: 0.5rem;
+  justify-content: center;
+  border-bottom: solid rgb(0, 143, 163) 0.3rem;
+  color: rgb(0, 143, 163);
+  height: 1.8rem;
+}
