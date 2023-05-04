@@ -10,19 +10,23 @@ import StoreAdvertise from "./Components/StoreAdvertise/StoreAdvertise";
 import MeetupStories from "./Components/MeetupStories/MeetupStories";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SearchResuts from "./Components/SearchResults/SearchResuts";
-import EmailSignup from "./Components/EmailSignup/EmailSignup"
+import SearchResults from "./Components/SearchResults/SearchResults";
+import EmailSignup from "./Components/EmailSignup/EmailSignup";
+import Login from "./Components/Login/Login";
+import Signup from "./Components/Signup/Signup";
+
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <BrowserRouter>
         <Routes>
+          {/* <Navbar />   */}
           <Route
             exact
             path="/"
             element={
               <>
+                <Navbar />
                 <Hero />
                 <StoriesTab />
                 <EventsSearch />
@@ -34,8 +38,18 @@ function App() {
               </>
             }
           />
-          <Route path="searchresults" element={<SearchResuts />} />
-          <Route path="Signup" element={<EmailSignup />} />
+          <Route path="searchresults" element={<SearchResults />} />
+          <Route
+            path="Signup"
+            element={
+              <>
+                <Navbar />
+                <EmailSignup />
+              </>
+            }
+          />
+          <Route path="login" element={<Login />} />
+          <Route path="joinMeetup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
 
