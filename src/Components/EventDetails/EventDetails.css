@@ -1,0 +1,62 @@
+.eventDetails {
+  margin: 5rem;
+  background-color: rgb(246, 247, 248);
+  padding: 1rem;
+}
+
+.hostData {
+  margin: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.profileImg {
+  border-radius: 2.5rem;
+  width: 3.5rem;
+}
+
+.eventImg {
+  width: 40rem;
+  height: 25rem;
+}
+.details {
+  margin: 2rem;
+}
+.attendeeImg {
+  border-radius: 2.5rem;
+  width: 5rem;
+}
+
+.location {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 3rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.shareBtn {
+  width: 7rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  color: rgb(0, 143, 163);
+  font-weight: bold;
+  border: solid rgb(0, 143, 163);
+  background-color: white;
+}
+.attend {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(231, 84, 84);
+}
+
+.photos {
+  margin-top: 2rem;
+}
