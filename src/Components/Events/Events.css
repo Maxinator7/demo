@@ -4,13 +4,19 @@
 }
 .dropDown {
   width: 10rem;
-  font-size: x-large;
+  font-size:larger;
   border-radius: 0.5rem;
   margin: 2rem;
 }
-.lowerDiv{
-    display: flex;
-    margin: 1.5rem;
-    justify-content: space-around;
-    align-items: center;
+.lowerDiv {
+  display: flex;
+  align-items: flex-start;
+  margin: 1.5rem;
+  justify-content: space-around;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  height: 30rem;
+  overflow-y: scroll;
 }
