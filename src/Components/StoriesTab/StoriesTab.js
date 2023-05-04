@@ -5,7 +5,7 @@ import "./StoriesTab.css";
 export default function StoriesTab() {
   const { events } = useSelector((store) => store.MeetupData);
 
-  const allStories = events.slice(0, 3).map((data) => {
+  const allStories = events.slice(3, 6).map((data) => {
     return (
       <div className="card ms-4 mt-4">
         <div>
@@ -25,6 +25,19 @@ export default function StoriesTab() {
     );
   });
   return (
-    <div className="d-flex justify-content-center mt-4 mb-4">{allStories}</div>
+    <>
+      <div className="d-flex justify-content-center mt-4 mb-4">
+        {allStories}
+      </div>
+      <div className="topicTabs">
+        <buttons className="topicBtn"> Meetup Topics</buttons>
+        <buttons className="topicBtn"> Meetup Topics</buttons>
+        <buttons className="topicBtn"> Meetup Topics</buttons>
+        <buttons className="topicBtn"> Meetup Topics</buttons>
+        <buttons className="topicBtn"> Meetup Topics</buttons>
+        <buttons className="topicBtn"> Meetup Topics</buttons>
+        <buttons className="topicBtn"> Meetup Topics</buttons>
+      </div>
+    </>
   );
 }
