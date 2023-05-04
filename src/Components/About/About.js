@@ -60,7 +60,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Link to={"/Signup"}>
+      <Link to={"/joinMeetup"}>
         <button className="joinMeetupButton">join Meetup</button>
       </Link>
     </div>
