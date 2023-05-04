@@ -1,0 +1,46 @@
+.groupDetails {
+  margin: 5rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.profileImg {
+  border-radius: 2.5rem;
+  width: 3.5rem;
+}
+
+.right {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.detailsSpan {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.eventImg {
+  width: 40rem;
+  height: 25rem;
+  border-radius: 1rem;
+}
+
+.groupBtn {
+  background-color: white;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.jointhegroup {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(231, 84, 84);
+}
