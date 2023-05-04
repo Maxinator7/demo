@@ -1,0 +1,20 @@
+.groupsTimeline {
+  margin-left: 5rem;
+}
+.dropDown {
+  width: 10rem;
+  font-size:large;
+  border-radius: 0.5rem;
+  margin: 2rem;
+}
+.groupsFilterBar {
+  display: flex;
+  align-items: center;
+}
+.dropDownY{
+    width: 10rem;
+    font-size:large;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    overflow-y:scroll;
+}
