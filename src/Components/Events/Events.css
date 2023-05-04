@@ -1,0 +1,16 @@
+.filterBar {
+  display: flex;
+  align-items: center;
+}
+.dropDown {
+  width: 10rem;
+  font-size: x-large;
+  border-radius: 0.5rem;
+  margin: 2rem;
+}
+.lowerDiv{
+    display: flex;
+    margin: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+}
