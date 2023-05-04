@@ -14,7 +14,8 @@ import SearchResults from "./Components/SearchResults/SearchResults";
 import EmailSignup from "./Components/EmailSignup/EmailSignup";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
-
+import EventDetails from "./Components/EventDetails/EventDetails";
+import GroupDetails from "./Components/GroupDetails/GroupDetails";
 function App() {
   return (
     <div className="App">
@@ -50,6 +51,24 @@ function App() {
           />
           <Route path="login" element={<Login />} />
           <Route path="joinMeetup" element={<Signup />} />
+          <Route
+            path="EventDetails"
+            element={
+              <>
+                <Navbar />
+                <EventDetails />
+              </>
+            }
+          />
+          <Route
+            path="GroupDetails"
+            element={
+              <>
+                <Navbar />
+                <GroupDetails />
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
 
