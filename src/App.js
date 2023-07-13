@@ -21,7 +21,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* <Navbar />   */}
           <Route
             exact
             path="/"
@@ -45,12 +44,37 @@ function App() {
             element={
               <>
                 <Navbar />
+                <Signup />
+              </>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <>
+                <Navbar />
+                <Login />
+              </>
+            }
+          />
+          <Route
+            path="joinMeetup"
+            element={
+              <>
+                <Navbar />
+                <Signup />
+              </>
+            }
+          />
+          <Route
+            path="Esignup"
+            element={
+              <>
+                <Navbar />
                 <EmailSignup />
               </>
             }
           />
-          <Route path="login" element={<Login />} />
-          <Route path="joinMeetup" element={<Signup />} />
           <Route
             path="EventDetails"
             element={

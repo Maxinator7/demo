@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const AddUsers = (obj) => {
- return  axios
-    .post("http://127.0.0.1:3333/api/signup", obj)
+const usersSignup = (obj) => {
+  return axios
+    .post("http://127.0.0.1:3333/user/store", obj)
     .then(function (response) {
       console.log(response);
     })
@@ -10,7 +10,4 @@ const AddUsers = (obj) => {
       console.log(error);
     });
 };
- export default AddUsers;
-
-
-//  AddUsers();
+export default usersSignup;

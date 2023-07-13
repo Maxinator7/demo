@@ -4,7 +4,19 @@ import { useSelector } from "react-redux";
 export default function Events() {
   const { events } = useSelector((store) => store.MeetupData);
 
-  const allCards = events.map((data) => {
+  const { searchedEvent, SearchedLocation } = useSelector(
+    (store) => store.MeetupData
+  );
+
+  const allCards = events.filter((data) => {
+    if (
+      data.title.includes(searchedEvent) ||
+      data.location.includes(SearchedLocation)
+    ) {
+      return data;
+    }
+  });
+  const filtercards = allCards.map((data) => {
     return (
       <div className="card mb-3" style={{ maxWidth: "540px" }}>
         <div className="row g-0">
@@ -119,7 +131,7 @@ export default function Events() {
         <span>Reset filters</span>
       </div>
       <div className="lowerDiv">
-        <div className="timeline">{allCards}</div>
+        <div className="timeline">{filtercards}</div>
 
         <div className="locationDetails">
           <span>Find events near</span>

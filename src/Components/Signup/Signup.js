@@ -7,7 +7,9 @@ export default function Signup() {
       <div className="signupTab">
         <img src="Meetup_Logo1.png" className="signupLogo"></img>
         <h1>Sign up</h1>
-        <p>Already a member? Log in</p>
+        <p>Already a member? 
+         <Link to={"login"}> <span>Log in</span></Link>
+        </p>
         <button className="btn">
           <i
             className="fa-brands fa-facebook-f"
@@ -23,7 +25,7 @@ export default function Signup() {
           <i className="fa-brands fa-apple" style={{ color: "#111212" }}></i>
           Continue with Apple
         </button>
-        <Link to={"/signup"} style={{ textDecorationLine: "none" }}>
+        <Link to={"Esignup"} style={{ textDecorationLine: "none" }}>
           <button
             className="btn"
             // data-toggle="modal"

@@ -12,8 +12,7 @@ export default function EventsSearch() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     dispatch(handleSearchEvent({ name: name, value: value }));
-    // console.log(name);
-    // console.log(value);
+
   };
   return (
     <div className="searchBar">

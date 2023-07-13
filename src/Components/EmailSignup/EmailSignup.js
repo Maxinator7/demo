@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import validator from "validator";
 import "./EmailSignup.css";
 import { Link } from "react-router-dom";
-import AddUsers from "../../Services/users";
-
+import usersSignup from "../../Services/usersSignup";
+import { useNavigate } from "react-router-dom";
+import { useSelector,useDispatch } from "react-redux";
 const EmailSignup = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [location, setLocation] = useState("");
   const [errors, setErrors] = useState({});
+
+const dispatch = useDispatch();
+
+// dispatch(handleLogin({name:name,value:value}))
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,6 +34,8 @@ const EmailSignup = () => {
       errors.password = "Password is required";
     } else if (!validator.isAlphanumeric(password)) {
       errors.password = "Password should be Alphanumeric";
+    } else if (password.length < 8) {
+      errors.password = "Password length must be at least 8";
     }
     if (!location) {
       errors.location = "Location is required";
@@ -37,24 +45,24 @@ const EmailSignup = () => {
     setErrors(errors);
     // submit form data if no errors
     if (Object.keys(errors).length === 0) {
-      console.log({ name, email, password, location });
-      AddUsers({
-        "name" : name,
-        "email" : email ,
-        "password" : password ,
-        "location" : location
-      }).then(function (response) {
-        console.log(response);
-        setEmail("");
-        setLocation("");
-        setName("");
-        setPassword("");
+      usersSignup({
+        name: name,
+        email: email,
+        password: password,
+        location: location,
       })
-      .catch(function (error) {
-        console.log(error);
-      });
-    
-     
+        .then(function (response) {
+          console.log(response.data.token);
+          setEmail("");
+          setLocation("");
+          setName("");
+          setPassword("");
+
+          navigate("/login");
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
   };
 
@@ -157,9 +165,8 @@ const EmailSignup = () => {
 
       <h6>
         Already a member?
-<Link to={"/login"}>
-
-        <span className="text-primary">Log in</span>
+        <Link to={"/login"}>
+          <span className="text-primary">Log in</span>
         </Link>
       </h6>
     </div>

@@ -1,37 +1,42 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Login from "../Login/Login";
+import Signup from "../Signup/Signup";
+import { useSelector } from "react-redux";
 export default function Navbar() {
+
+  const {user} =useSelector(store=>store.MeetupData)
   return (
     <div>
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img
-              src="meetuplogo.svg"
-              alt="meetup.com"
-              className="logoImg"
-            ></img>
+            <img src="meetuplogo.svg" alt="meetupcom" className="logoImg"></img>
           </a>
-          <div className="navOptions">
-            <i className="fa-solid fa-globe me-2"></i>
-            <span className="me-2">English</span>
-            <button
-              type="button"
-              className="logIn"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Log in
-            </button>
-            <button
-              className="signIn"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Sign up
-            </button>
-          </div>
+          {user.length <= 0 && (
+            <div className="navOptions">
+              <i className="fa-solid fa-globe me-2"></i>
+              <span className="me-2">English</span>
+              <button
+                type="button"
+                className="logIn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Log in
+              </button>
+              <button
+                className="signIn"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Sign up
+              </button>
+            </div>
+          )}
+
+          {user.length > 0 && <h1>Welcome {user}</h1>}
         </div>
       </nav>
 
@@ -51,158 +56,36 @@ export default function Navbar() {
               {" "}
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div className="signupTab">
-              <img src="Meetup_Logo1.png" className="signupLogo"></img>
-              <h1>Sign up</h1>
-              <p>Already a member? Log in</p>
-              <button className="btn">
-                <i
-                  className="fa-brands fa-facebook-f"
-                  style={{ color: "#155cd5" }}
-                ></i>
-                Continue with facebook
-              </button>
-              <button className="btn">
-                <i
-                  className="fa-brands fa-google"
-                  style={{ color: "#ec1313" }}
-                ></i>
-                Continue with Google
-              </button>
-              <button className="btn">
-                <i
-                  className="fa-brands fa-apple"
-                  style={{ color: "#111212" }}
-                ></i>
-                Continue with Apple
-              </button>
-              <Link to={"/signup"} style={{textDecorationLine:"none"}}>
-                <button
-                  className="btn"
-                  data-target="#myModal"
-                  data-toggle="modal"
-                  //data-target="#signupModal"
-                  data-keyboard="false"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <i
-                    className="fa-solid fa-envelope"
-                    style={{ color: "#6e7072" }}
-                  ></i>
-                  Sign up with email
-                </button>
-              </Link>
-            </div>
+
+            <Signup />
           </div>
         </div>
       </div>
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body border border-secondary">
-              <div className="loginmodel">
-                <img src="Meetup_Logo1.png" className="signupLogo"></img>
-                <h1>Log in</h1>
-                <p>
-                  Not a member yet ?
-                  <span className="text-primary"> Sign up</span>
-                </p>
-                <form>
-                  <div class="form-group mt-4">
-                    <label
-                      style={{ fontWeight: "bolder" }}
-                      for="formGroupExampleInput2"
-                    >
-                      Email address
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="formGroupExampleInput2"
-                      placeholder="Enter your email address"
-                    />
-                  </div>
-                  <div class="form-group mt-4">
-                    <label
-                      className="d-flex justify-content-between"
-                      for="formGroupExampleInput"
-                    >
-                      <div style={{ fontWeight: "bolder" }}>Password</div>
-                      <div className="text-primary">Forgot password</div>
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="formGroupExampleInput"
-                      placeholder="Enter Password"
-                    />
-                  </div>
 
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <button className="logInBtn">Log in</button>
-
-                    <h6>
-                      ----------------------------------- or
-                      -----------------------------------
-                    </h6>
-
-                    <button className="btn">
-                      <i
-                        className="fa-brands fa-facebook-f"
-                        style={{ color: "#155cd5" }}
-                      ></i>
-                      Continue with facebook
-                    </button>
-                    <button className="btn">
-                      <i
-                        className="fa-brands fa-google"
-                        style={{ color: "#ec1313" }}
-                      ></i>
-                      Continue with Google
-                    </button>
-                    <button className="btn">
-                      <i
-                        className="fa-brands fa-apple"
-                        style={{ color: "#111212" }}
-                      ></i>
-                      Continue with Apple
-                    </button>
-
-                    <button className="btn">
-                      {" "}
-                      <h6 className="text-primary">Issues with log in ?</h6>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <Login />
           </div>
         </div>
       </div>

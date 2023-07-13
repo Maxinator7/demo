@@ -7,8 +7,8 @@ const initialState = {
   events: data,
   Groups: groups,
   meetupStories: stories,
-  // EmailAddress : "",
-  // Password: "",
+  user: "",
+  token: "",
   searchedEvent: "",
   SearchedLocation: "",
 };
@@ -18,16 +18,13 @@ const dataSlice = createSlice({
   initialState,
   reducers: {
     handleSearchEvent: (state, { payload }) => {
-      console.log(payload);
       state[payload.name] = payload.value;
     },
 
-    handleSearchLocation: (state, { payload }) => {
-      // console.log(action);
-      console.log(payload);
-      // action.searchedEvent=
+    handleLogin: (state, { payload }) => {
+      state["user"] = payload;
     },
   },
 });
-export const { handleSearchEvent, handleSearchLocation } = dataSlice.actions;
+export const { handleSearchEvent, handleLogin } = dataSlice.actions;
 export default dataSlice.reducer;

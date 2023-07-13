@@ -2,10 +2,16 @@ import React from "react";
 import "./SearchResults.css";
 import Events from "../Events/Events";
 import Groups from "../Groups/Groups";
+import { useSelector } from "react-redux";
 
 function SearchResults() {
+  const {searchedEvent,SearchedLocation} =useSelector(store=>store.MeetupData)
+
+  
   return (
     <div className="searchResults">
+    <h1>{searchedEvent}</h1>
+    <h1>{SearchedLocation}</h1>
       <h1 className="mt-5">Event near Bangalore,IN</h1>
       <div className="tabs">
         <p className="d-flex gap-4 ms-4">
