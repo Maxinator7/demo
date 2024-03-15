@@ -1,12 +1,11 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Login from "../Login/Login";
-import Signup from "../Signup/Signup";
+import LoginModal from "../LoginModal/LoginModal";
+import SignupModal from "../SignupModal/SignupModal";
 import { useSelector } from "react-redux";
 export default function Navbar() {
-
-  const {user} =useSelector(store=>store.MeetupData)
+  const { user } = useSelector((store) => store.MeetupData);
   return (
     <div>
       <nav className="navbar navbar-expand-lg ">
@@ -62,7 +61,7 @@ export default function Navbar() {
               ></button>
             </div>
 
-            <Signup />
+            <SignupModal />
           </div>
         </div>
       </div>
@@ -85,7 +84,7 @@ export default function Navbar() {
               ></button>
             </div>
 
-            <Login />
+            <LoginModal />
           </div>
         </div>
       </div>

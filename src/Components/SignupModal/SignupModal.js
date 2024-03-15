@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Signup.css";
+import "./SignupModal.css";
 export default function Signup() {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <div className="signupTab">
-        <img src="Meetup_Logo1.png" className="signupLogo" alt="logo"></img>
+        <img src="Meetup_Logo1.png" className="signupLogo"></img>
         <h1>Sign up</h1>
-        <p>
+        <p data-bs-dismiss="modal">
           Already a member?
           <Link to={"/login"}>
             {" "}

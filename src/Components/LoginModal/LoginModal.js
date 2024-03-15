@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import validator from "validator";
-import "./Login.css";
+import "./LoginModal.css"
 import { useNavigate, Link } from "react-router-dom";
 import usersLogin from "../../Services/usersLogin";
 import { useDispatch } from "react-redux";
@@ -72,7 +72,7 @@ function Login() {
       ></img>
       <h1>Log in</h1>
 
-      <p>
+      <p data-bs-dismiss="modal">
         Not a member yet ?{" "}
         <Link to="/Signup">
           <span className="text-primary"> Sign up</span>

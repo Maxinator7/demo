@@ -4,7 +4,7 @@ import "./EmailSignup.css";
 import { Link } from "react-router-dom";
 import usersSignup from "../../Services/usersSignup";
 import { useNavigate } from "react-router-dom";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 const EmailSignup = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -13,9 +13,9 @@ const EmailSignup = () => {
   const [location, setLocation] = useState("");
   const [errors, setErrors] = useState({});
 
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-// dispatch(handleLogin({name:name,value:value}))
+  // dispatch(handleLogin({name:name,value:value}))
 
   const handleSubmit = (event) => {
     event.preventDefault();

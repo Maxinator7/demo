@@ -16,6 +16,8 @@ import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import EventDetails from "./Components/EventDetails/EventDetails";
 import GroupDetails from "./Components/GroupDetails/GroupDetails";
+import SignupModal from "./Components/SignupModal/SignupModal"
+import LoginModal from "./Components/LoginModal/LoginModal"
 function App() {
   return (
     <div className="App">
@@ -48,12 +50,30 @@ function App() {
               </>
             }
           />
+             <Route
+            path="SignupModal"
+            element={
+              <>
+                <Navbar />
+                <SignupModal />
+              </>
+            }
+          />
           <Route
             path="login"
             element={
               <>
                 <Navbar />
                 <Login />
+              </>
+            }
+          />
+             <Route
+            path="loginModal"
+            element={
+              <>
+                <Navbar />
+                <LoginModal />
               </>
             }
           />
